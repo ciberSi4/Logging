@@ -35,7 +35,7 @@ class RunnerTest(unittest.TestCase):
             logging.info('"test_run" выполнен успешно')  # Регистрируем информационное сообщение о завершении теста
             self.assertEqual(runn.distance, 100)  # Проверяем, что расстояние составляет 100 единиц
         except TypeError as e:  # Перехватываем исключение TypeError
-            logging.warning(f"Неверный тип данных для объекта Runner: {str(e)}, exc_info=True")  # Регистрируем предупреждение о неверном типе данных
+            logging.warning(f"Неверный тип данных для объекта Runner: {str(e)}", exc_info=True)  # Регистрируем предупреждение о неверном типе данных
 
     def test_challenge(self):
         runn1 = Runner("Никита")  # Создаем объект Runner с именем "Никита"
